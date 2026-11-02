@@ -1,0 +1,217 @@
+﻿
+1. Conditional Number Classification
+
+classify = lambda n: “Zero” if n == 0 else (“Positive Even” if n > 0 and
+n % 2 == 0 else “Positive Odd” if n > 0 else (“Negative Even” if n % 2
+== 0 else “Negative Odd”))
+
+print(classify(8)) print(classify(-3)) print(classify(0))
+
+2. Second-Largest of Three Numbers
+
+second_largest = lambda a, b, c: a if (a > b and a < c) or (a < b and
+a > c) else (b if (b > a and b < c) or (b < a and b > c) else c)
+
+print(second_largest(10, 25, 15))
+
+3. Custom String Analyzer
+
+text = “Hello World” vowels = “aeiouAEIOU” analyze = lambda s: (len([ch
+for ch in s if ch != ” ”]), len([ch for ch in s if ch in vowels]),
+len([ch for ch in s if ch.isalpha() and ch not in vowels]))
+print(analyze(text))
+
+4. Leap-Year Checker
+
+is_leap = lambda year: year % 400 == 0 or (year % 4 == 0 and year % 100
+!= 0) print(is_leap(2024)) print(is_leap(2023))
+
+5. Nested Lambda Calculator
+
+calculator = lambda a, b, op: (lambda: a + b if op == “+” else a - b if
+op == “-” else a * b if op == “*” else a / b if op == “/” and b != 0
+else “Cannot divide by zero” if op == “/” else “Invalid operator”)()
+print(calculator(10, 5, “+”)) print(calculator(10, 0, “/”))
+
+6. Transform and Extract Digits
+
+numbers = [123, 45, 206, 99] result = list(map(lambda n: sum(int(digit)
+** 2 for digit in str(abs(n))), numbers)) print(result)
+
+7. Student Marks Transformation
+
+marks = [78, 92, 65, 98] result = list(map(lambda m: min(round(m * 1.08,
+2), 100), marks)) print(result)
+
+8. Convert Nested Records
+
+employees = [(“Ravi”, 25000, 3000), (“Anu”, 30000, 5000)] result =
+list(map(lambda emp: (emp[0], emp[1] + emp[2]), employees))
+print(result)
+
+9. Binary Conversion
+
+numbers = [2, 5, 10, 15] result = list(map(lambda n: bin(n)[2:],
+numbers)) print(result)
+
+10. Matrix Row Transformation
+
+matrix = [[1, 2, 3], [4, 5], [6, 7, 8]] result = list(map(lambda row:
+sum(x ** 2 for x in row), matrix)) print(result)
+
+11. Armstrong Numbers
+
+def is_armstrong(n): digits = str(n) power = len(digits) return n >= 0
+and sum(int(d) ** power for d in digits) == n
+
+numbers = [0, 1, 153, 370, 123, 9474] result = list(filter(lambda n:
+is_armstrong(n), numbers)) print(result)
+
+12. Prime Numbers with Digit Constraints
+
+def is_prime(n): return n > 1 and all(n % i != 0 for i in range(2, int(n
+** 0.5) + 1))
+
+digit_sum = lambda n: sum(int(d) for d in str(n)) numbers = [2, 11, 13,
+17, 23, 29, 31, 37] result = list(filter(lambda n: is_prime(n) and
+is_prime(digit_sum(n)), numbers)) print(result)
+
+13. Palindrome Strings
+
+words = [“Madam”, “nurses run”, “Hello”, “Level”, “Python”] result =
+list(filter(lambda s: s.lower().replace(” “,”“) == s.lower().replace(”
+“,”“)[::-1], words)) print(result)
+
+14. Student Eligibility
+
+students = [ {“name”: “Ravi”, “marks”: 80, “attendance”: 90}, {“name”:
+“Anu”, “marks”: 72, “attendance”: 95}, {“name”: “Kiran”, “marks”: 85,
+“attendance”: 82}] result = list(filter(lambda s: s[“marks”] >= 75 and
+s[“attendance”] >= 85, students)) print(result)
+
+15. Advanced List Filtering
+
+numbers = [21, 28, 30, 42, 56, 63, 70, 77] result = list(filter(lambda
+n: (n % 3 == 0 or n % 7 == 0) and n % 5 != 0 and sum(int(d) for d in
+str(abs(n))) % 2 == 0, numbers)) print(result)
+
+16. Product of Nonzero Digits
+
+from functools import reduce
+
+number = 2045 digits = [int(d) for d in str(number) if d != “0”] result
+= reduce(lambda a, b: a * b, digits, 1) print(result)
+
+17. Find the Greatest Common Divisor (GCD)
+
+def gcd(a, b): while b: a, b = b, a % b return a
+
+numbers = [24, 36, 60] result = reduce(lambda a, b: gcd(a, b), numbers)
+print(result)
+
+18. Decimal Number from Digits
+
+digits = [4, 2, 7, 1] result = reduce(lambda number, digit: number *
+10 + digit, digits, 0) print(result)
+
+19. Flatten a Nested List
+
+nested = [[1, 2], [3], [4, 5, 6]] result = reduce(lambda a, b: a + b,
+nested, []) print(result)
+
+20. Calculate a Weighted Total
+
+Each tuple contains (quantity, unit_price, discount_percentage)
+
+items = [(2, 100, 10), (3, 50, 20), (1, 200, 5)] total = reduce(lambda
+acc, item: acc + item[0] * item[1] * (1 - item[2] / 100), items, 0)
+print(round(total, 2))
+
+21. Sort by Digit Sum
+
+numbers = [45, 12, 30, 8, 21, 111] result = sorted(numbers, key=lambda
+n: (sum(int(d) for d in str(abs(n))), n)) print(result)
+
+22. Sort Strings by Multiple Criteria
+
+words = [“banana”, “Kiwi”, “apple”, “fig”, “Cherry”, “pear”] result =
+sorted(words, key=lambda s: (-len(s), s.lower())) print(result)
+
+23. Sort Students by Performance
+
+students = [ {“name”: “Ravi”, “marks”: 85, “attendance”: 90}, {“name”:
+“Anu”, “marks”: 92, “attendance”: 85}, {“name”: “Kiran”, “marks”: 85,
+“attendance”: 95}, {“name”: “Bala”, “marks”: 85, “attendance”: 95}]
+result = sorted(students, key=lambda s: (-s[“marks”], -s[“attendance”],
+s[“name”].lower())) print(result)
+
+24. Sort Version Numbers
+
+versions = [“2.10.1”, “2.9.8”, “10.0.0”, “2.10.0”] result =
+sorted(versions, key=lambda v: tuple(int(part) for part in
+v.split(“.”))) print(result)
+
+25. Filter -> Map -> Sort
+
+def is_prime(n): return n > 1 and all(n % i != 0 for i in range(2, int(n
+** 0.5) + 1))
+
+numbers = [2, 3, 4, 5, 7, 11, 13, 17, 19, 23] prime_numbers =
+filter(lambda n: is_prime(n), numbers) transformed = map(lambda n:
+sum(int(d) ** 2 for d in str(n)), prime_numbers) result =
+sorted(set(transformed), reverse=True) print(result)
+
+26. Map -> Filter -> Reduce
+
+marks = [45, 50, 55, 60, 70, 80] increased = map(lambda m: m * 1.10,
+marks) eligible = filter(lambda m: m >= 60, increased) total =
+reduce(lambda a, b: a + b, eligible, 0) print(round(total, 2))
+
+27. Filter -> Map -> Reduce
+
+numbers = [3, 5, 10, 15, 20, 30] selected = filter(lambda n: n % 3 == 0
+and n % 5 == 0, numbers) squared = map(lambda n: n ** 2, selected) total
+= reduce(lambda a, b: a + b, squared, 0) print(total)
+
+28. Complex Student Ranking
+
+students = [ {“name”: “Ravi”, “marks”: 80, “attendance”: 90,
+“assignments_completed”: 9}, {“name”: “Anu”, “marks”: 75, “attendance”:
+95, “assignments_completed”: 10}, {“name”: “Kiran”, “marks”: 92,
+“attendance”: 82, “assignments_completed”: 8}, {“name”: “Meena”,
+“marks”: 55, “attendance”: 95, “assignments_completed”: 10}, {“name”:
+“John”, “marks”: 88, “attendance”: 86, “assignments_completed”: 10}]
+eligible = filter(lambda s: s[“marks”] >= 60 and s[“attendance”] >= 80
+and s[“assignments_completed”] >= 8, students) scored = map(lambda s:
+{**s, “final_score”: 0.70 * s[“marks”] + 0.20 * s[“attendance”] + 0.10 *
+(s[“assignments_completed”] * 10)}, eligible) result = sorted(scored,
+key=lambda s: s[“final_score”], reverse=True)[:3] print(result)
+
+29. Advanced Transaction Analysis
+
+transactions = [ {“transaction_id”: “T1”, “amount”: 1200, “status”:
+“SUCCESS”}, {“transaction_id”: “T2”, “amount”: 300, “status”:
+“SUCCESS”}, {“transaction_id”: “T3”, “amount”: 800, “status”: “FAILED”},
+{“transaction_id”: “T4”, “amount”: 750, “status”: “SUCCESS”}] valid =
+filter(lambda t: t[“status”] == “SUCCESS” and t[“amount”] >= 500,
+transactions) ordered = sorted(valid, key=lambda t: t[“amount”],
+reverse=True) total = reduce(lambda acc, t: acc + t[“amount”], ordered,
+0) print(ordered) print(“Total transaction value:”, total)
+
+30. Ultimate Functional Programming Challenge
+
+def is_prime(n): return n > 1 and all(n % i != 0 for i in range(2, int(n
+** 0.5) + 1))
+
+digit_sum = lambda n: sum(int(d) for d in str(n)) digit_product = lambda
+n: reduce(lambda a, b: a * b, (int(d) for d in str(n)), 1)
+
+numbers = [12, 15, 23, 30, 41, 56, 78, 101, -9, 0, 123] positive =
+filter(lambda n: n > 0, numbers) valid = filter(lambda n:
+is_prime(digit_sum(n)), positive) products = map(lambda n:
+digit_product(n), valid) unique_products = set(products) result =
+sorted(unique_products, key=lambda n: (digit_sum(n), -n)) total =
+reduce(lambda a, b: a + b, result, 0) print(“Sorted list:”, result)
+print(“Final sum:”, total)
+
+
