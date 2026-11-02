@@ -1,0 +1,344 @@
+Input and Output Statements
+---------------------------
+
+input()
+
+name = input("Enter your name: ")
+print(name)
+
+city = input("Enter your city: ")
+print(city)
+
+course = input("Enter your course: ")
+print(course)
+
+college = input("Enter your college: ")
+print(college)
+
+phone = input("Enter your phone number: ")
+print(phone)
+
+email = input("Enter your email: ")
+print(email)
+
+color = input("Enter your favorite color: ")
+print(color)
+
+food = input("Enter your favorite food: ")
+print(food)
+
+hobby = input("Enter your hobby: ")
+print(hobby)
+
+language = input("Enter your favorite programming language: ")
+print(language)
+
+
+Integer input
+
+age = int(input("Enter your age: "))
+print(age)
+
+marks = int(input("Enter your marks: "))
+print(marks)
+
+num = int(input("Enter a number: "))
+print(num)
+
+year = int(input("Enter your birth year: "))
+print(year)
+
+salary = int(input("Enter your salary: "))
+print(salary)
+
+days = int(input("Enter number of days: "))
+print(days)
+
+quantity = int(input("Enter quantity: "))
+print(quantity)
+
+price = int(input("Enter price: "))
+print(price)
+
+distance = int(input("Enter distance: "))
+print(distance)
+
+students = int(input("Enter number of students: "))
+print(students)
+
+
+Float input
+
+salary = float(input("Enter your salary: "))
+print(salary)
+
+height = float(input("Enter your height: "))
+print(height)
+
+weight = float(input("Enter your weight: "))
+print(weight)
+
+price = float(input("Enter product price: "))
+print(price)
+
+temperature = float(input("Enter temperature: "))
+print(temperature)
+
+percentage = float(input("Enter percentage: "))
+print(percentage)
+
+distance = float(input("Enter distance: "))
+print(distance)
+
+rating = float(input("Enter rating: "))
+print(rating)
+
+amount = float(input("Enter amount: "))
+print(amount)
+
+average = float(input("Enter average: "))
+print(average)
+
+
+Multiple inputs using split()
+
+name, city = input("Enter name and city: ").split()
+print(name, city)
+
+first_name, last_name = input("Enter first and last name: ").split()
+print(first_name, last_name)
+
+name, age = input("Enter name and age: ").split()
+print(name, age)
+
+city, state = input("Enter city and state: ").split()
+print(city, state)
+
+username, password = input("Enter username and password: ").split()
+print(username, password)
+
+brand, model = input("Enter brand and model: ").split()
+print(brand, model)
+
+college, branch = input("Enter college and branch: ").split()
+print(college, branch)
+
+subject, marks = input("Enter subject and marks: ").split()
+print(subject, marks)
+
+country, capital = input("Enter country and capital: ").split()
+print(country, capital)
+
+company, role = input("Enter company and role: ").split()
+print(company, role)
+
+
+Multiple integer inputs
+
+a, b = map(int, input("Enter two numbers: ").split())
+print(a + b)
+
+a, b = map(int, input("Enter two numbers: ").split())
+print(a - b)
+
+a, b = map(int, input("Enter two numbers: ").split())
+print(a * b)
+
+a, b = map(int, input("Enter two numbers: ").split())
+print(a // b)
+
+a, b, c = map(int, input("Enter three numbers: ").split())
+print(a + b + c)
+
+a, b, c = map(int, input("Enter three numbers: ").split())
+print(a * b * c)
+
+x, y = map(int, input("Enter length and width: ").split())
+print(x * y)
+
+x, y = map(int, input("Enter two numbers: ").split())
+print(x ** y)
+
+marks1, marks2, marks3 = map(int, input("Enter three marks: ").split())
+print(marks1 + marks2 + marks3)
+
+day, month, year = map(int, input("Enter date: ").split())
+print(day, month, year)
+
+
+print()
+
+print("Hello Python")
+print("Welcome to Programming")
+print("I am learning Python")
+print("Python is easy")
+print("I am a CSE student")
+print("Today I practiced Python")
+print("Hello World")
+print("Good Morning")
+print("Welcome to my program")
+print("Python Programming")
+
+
+Printing variables
+
+name = "Pavan"
+print(name)
+
+age = 21
+print(age)
+
+city = "Mandya"
+print(city)
+
+branch = "CSE"
+print(branch)
+
+college = "Engineering College"
+print(college)
+
+marks = 85
+print(marks)
+
+salary = 25000
+print(salary)
+
+language = "Python"
+print(language)
+
+hobby = "Reading"
+print(hobby)
+
+country = "India"
+print(country)
+
+
+Printing multiple values
+
+name = "Pavan"
+age = 21
+print(name, age)
+
+name = "Pavan"
+city = "Mandya"
+print(name, city)
+
+name = "Pavan"
+age = 21
+city = "Mandya"
+print(name, age, city)
+
+a = 10
+b = 20
+print(a, b)
+
+a = 10
+b = 20
+c = 30
+print(a, b, c)
+
+product = "Laptop"
+price = 50000
+print(product, price)
+
+name = "Pavan"
+branch = "CSE"
+year = 3
+print(name, branch, year)
+
+x = 10
+y = 5
+print(x, y, x + y)
+
+student = "Pavan"
+marks = 90
+print(student, marks)
+
+city = "Bengaluru"
+state = "Karnataka"
+country = "India"
+print(city, state, country)
+
+
+sep
+
+print("Pavan", 21, "CSE", sep=" | ")
+print("Python", "Java", "C++", sep=" - ")
+print("2026", "09", "24", sep="-")
+print("10", "20", "30", sep=",")
+print("Name", "Age", "City", sep=" | ")
+print("A", "B", "C", sep="---")
+print("www", "google", "com", sep=".")
+print("India", "Karnataka", "Mandya", sep=" -> ")
+print("Day", "Month", "Year", sep=" / ")
+print("Python", "Programming", sep=" ")
+
+
+end
+
+print("Hello", end=" ")
+print("Python")
+
+print("Good", end=" ")
+print("Morning")
+
+print("Python", end=" ")
+print("Programming")
+
+print("Hello", end="---")
+print("World")
+
+print("10", end=" ")
+print("20")
+
+print("Pavan", end=" ")
+print("Kumar")
+
+print("First", end=" -> ")
+print("Second")
+
+print("A", end=", ")
+print("B")
+
+print("Loading", end="...")
+print("Done")
+
+print("Welcome", end=" ")
+print("to Python")
+
+
+f-string
+
+name = "Pavan"
+print(f"My name is {name}")
+
+age = 21
+print(f"I am {age} years old")
+
+city = "Mandya"
+print(f"I live in {city}")
+
+marks = 85
+print(f"My marks are {marks}")
+
+branch = "CSE"
+print(f"My branch is {branch}")
+
+salary = 30000
+print(f"My salary is {salary}")
+
+name = "Pavan"
+age = 21
+print(f"My name is {name} and I am {age} years old")
+
+a = 10
+b = 20
+print(f"The sum is {a + b}")
+
+length = 10
+width = 5
+print(f"Area is {length * width}")
+
+name = "Pavan"
+city = "Mandya"
+print(f"My name is {name} and I am from {city}")
