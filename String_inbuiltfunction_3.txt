@@ -1,0 +1,549 @@
+print("-".join("PYTHON"))
+print("P-Y-T-H-O-N")
+
+print(" ".join(["Hello", "Python"]))
+print("Hello Python")
+
+print(",".join(["Apple", "Banana", "Mango"]))
+print("Apple,Banana,Mango")
+
+print("*".join("HELLO"))
+print("H*E*L*L*O")
+
+print("123".join("ABC"))
+print("A123B123C")
+
+print(" ".join("HELLO"))
+print("H E L L O")
+
+print("#".join("WORLD"))
+print("W#O#R#L#D")
+
+print(" - ".join(["Python", "Java", "C"]))
+print("Python - Java - C")
+
+print("".join(["P", "Y", "T", "H", "O", "N"]))
+print("PYTHON")
+
+print("::".join(["10", "20", "30"]))
+print("10::20::30")
+
+msg="hello"
+print(msg.zfill(10))
+print("00000hello")
+
+msg="python"
+print(msg.zfill(10))
+print("0000python")
+
+msg="123"
+print(msg.zfill(5))
+print("00123")
+
+msg="45"
+print(msg.zfill(6))
+print("000045")
+
+msg="9999"
+print(msg.zfill(8))
+print("00009999")
+
+msg="hello"
+print(msg.zfill(3))
+print("hello")
+
+msg="12.5"
+print(msg.zfill(8))
+print("000012.5")
+
+msg="+123"
+print(msg.zfill(7))
+print("+000123")
+
+msg="-456"
+print(msg.zfill(7))
+print("-000456")
+
+msg="0.99"
+print(msg.zfill(7))
+print("0000.99")
+
+msg="12345"
+print(msg.isdecimal())
+print(True)
+
+msg="000123"
+print(msg.isdecimal())
+print(True)
+
+msg="123abc"
+print(msg.isdecimal())
+print(False)
+
+msg="12.34"
+print(msg.isdecimal())
+print(False)
+
+msg="-123"
+print(msg.isdecimal())
+print(False)
+
+msg="123 456"
+print(msg.isdecimal())
+print(False)
+
+msg=""
+print(msg.isdecimal())
+print(False)
+
+msg="987654"
+print(msg.isdecimal())
+print(True)
+
+msg="12a34"
+print(msg.isdecimal())
+print(False)
+
+msg="12345!"
+print(msg.isdecimal())
+print(False)
+
+msg="12345"
+print(msg.isnumeric())
+print(True)
+
+msg="000123"
+print(msg.isnumeric())
+print(True)
+
+msg="-12345"
+print(msg.isnumeric())
+print(False)
+
+msg="1.234"
+print(msg.isnumeric())
+print(False)
+
+msg="123 abc"
+print(msg.isnumeric())
+print(False)
+
+msg=""
+print(msg.isnumeric())
+print(False)
+
+msg="987654"
+print(msg.isnumeric())
+print(True)
+
+msg="12a34"
+print(msg.isnumeric())
+print(False)
+
+msg="123!"
+print(msg.isnumeric())
+print(False)
+
+msg="1000"
+print(msg.isnumeric())
+print(True)
+
+msg="HELLO"
+print(msg.casefold())
+print("hello")
+
+msg="PYTHON"
+print(msg.casefold())
+print("python")
+
+msg="HELLO PYTHON"
+print(msg.casefold())
+print("hello python")
+
+msg="Hello World"
+print(msg.casefold())
+print("hello world")
+
+msg="WELCOME"
+print(msg.casefold())
+print("welcome")
+
+msg="PyThOn"
+print(msg.casefold())
+print("python")
+
+msg="GOOD MORNING"
+print(msg.casefold())
+print("good morning")
+
+msg="ABC123"
+print(msg.casefold())
+print("abc123")
+
+msg="HELLO123"
+print(msg.casefold())
+print("hello123")
+
+msg="I LOVE PYTHON"
+print(msg.casefold())
+print("i love python")
+
+msg="####hello####"
+print(msg.strip("#"))
+print("hello")
+
+msg="   hello   "
+print(msg.strip(" "))
+print("hello")
+
+msg="***Python***"
+print(msg.strip("*"))
+print("Python")
+
+msg="@@@hello@@@"
+print(msg.strip("@"))
+print("hello")
+
+msg="123hello123"
+print(msg.strip("123"))
+print("hello")
+
+msg="---Python---"
+print(msg.strip("-"))
+print("Python")
+
+msg="HHHelloHHH"
+print(msg.strip("H"))
+print("ello")
+
+msg="##Python##"
+print(msg.strip("#"))
+print("Python")
+
+msg="  Hello World  "
+print(msg.strip(" "))
+print("Hello World")
+
+msg="##@@hello@@##"
+print(msg.strip("#@"))
+print("hello")
+
+msg="####hello####"
+print(msg.lstrip("#"))
+print("hello####")
+
+msg="   hello"
+print(msg.lstrip(" "))
+print("hello")
+
+msg="***Python***"
+print(msg.lstrip("*"))
+print("Python***")
+
+msg="@@@hello@@@"
+print(msg.lstrip("@"))
+print("hello@@@")
+
+msg="123hello123"
+print(msg.lstrip("123"))
+print("hello123")
+
+msg="---Python---"
+print(msg.lstrip("-"))
+print("Python---")
+
+msg="HHHello"
+print(msg.lstrip("H"))
+print("ello")
+
+msg="##Python##"
+print(msg.lstrip("#"))
+print("Python##")
+
+msg="  Hello World  "
+print(msg.lstrip(" "))
+print("Hello World  ")
+
+msg="##@@hello@@##"
+print(msg.lstrip("#@"))
+print("hello@@##")
+
+msg="####hello####"
+print(msg.rstrip("#"))
+print("####hello")
+
+msg="hello   "
+print(msg.rstrip(" "))
+print("hello")
+
+msg="***Python***"
+print(msg.rstrip("*"))
+print("***Python")
+
+msg="@@@hello@@@"
+print(msg.rstrip("@"))
+print("@@@hello")
+
+msg="123hello123"
+print(msg.rstrip("123"))
+print("123hello")
+
+msg="---Python---"
+print(msg.rstrip("-"))
+print("---Python")
+
+msg="helloHHH"
+print(msg.rstrip("H"))
+print("hello")
+
+msg="##Python##"
+print(msg.rstrip("#"))
+print("##Python")
+
+msg="  Hello World  "
+print(msg.rstrip(" "))
+print("  Hello World")
+
+msg="##@@hello@@##"
+print(msg.rstrip("#@"))
+print("##@@hello")
+
+msg="HELLO"
+print(msg.center(11,"#"))
+print("###HELLO###")
+
+msg="PYTHON"
+print(msg.center(12,"*"))
+print("***PYTHON***")
+
+msg="HI"
+print(msg.center(10,"-"))
+print("----HI----")
+
+msg="ABC"
+print(msg.center(9,"."))
+print("...ABC...")
+
+msg="HELLO"
+print(msg.center(7,"$"))
+print("$HELLO$")
+
+msg="PYTHON"
+print(msg.center(10," "))
+print("  PYTHON  ")
+
+msg="CAT"
+print(msg.center(8,"#"))
+print("##CAT###")
+
+msg="DOG"
+print(msg.center(7,"*"))
+print("**DOG**")
+
+msg="A"
+print(msg.center(5,"-"))
+print("--A--")
+
+msg="HELLO"
+print(msg.center(5,"#"))
+print("HELLO")
+
+msg="HELLO"
+print(msg.ljust(10,"*"))
+print("HELLO*****")
+
+msg="PYTHON"
+print(msg.ljust(10,"-"))
+print("PYTHON----")
+
+msg="HI"
+print(msg.ljust(6,"."))
+print("HI....")
+
+msg="ABC"
+print(msg.ljust(8,"#"))
+print("ABC#####")
+
+msg="DOG"
+print(msg.ljust(7,"$"))
+print("DOG$$$$")
+
+msg="HELLO"
+print(msg.ljust(8))
+print("HELLO   ")
+
+msg="PYTHON"
+print(msg.ljust(6,"*"))
+print("PYTHON")
+
+msg="A"
+print(msg.ljust(5,"-"))
+print("A----")
+
+msg="DATA"
+print(msg.ljust(9,"."))
+print("DATA.....")
+
+msg="CODE"
+print(msg.ljust(7,"#"))
+print("CODE###")
+
+msg="HELLO"
+print(msg.rjust(10,"$"))
+print("$$$$$HELLO")
+
+msg="PYTHON"
+print(msg.rjust(10,"-"))
+print("----PYTHON")
+
+msg="HI"
+print(msg.rjust(6,"."))
+print("....HI")
+
+msg="ABC"
+print(msg.rjust(8,"#"))
+print("#####ABC")
+
+msg="DOG"
+print(msg.rjust(7,"$"))
+print("$$$$DOG")
+
+msg="HELLO"
+print(msg.rjust(8))
+print("   HELLO")
+
+msg="PYTHON"
+print(msg.rjust(6,"*"))
+print("PYTHON")
+
+msg="A"
+print(msg.rjust(5,"-"))
+print("----A")
+
+msg="DATA"
+print(msg.rjust(9,"."))
+print(".....DATA")
+
+msg="CODE"
+print(msg.rjust(7,"#"))
+print("###CODE")
+
+msg="hello\tpython"
+print(msg.expandtabs(4))
+print("hello   python")
+
+msg="hello\tworld"
+print(msg.expandtabs(2))
+print("hello world")
+
+msg="A\tB"
+print(msg.expandtabs(4))
+print("A   B")
+
+msg="A\tB"
+print(msg.expandtabs(8))
+print("A       B")
+
+msg="Python\tJava\tC"
+print(msg.expandtabs(4))
+print("Python  Java  C")
+
+msg="Name:\tPavan"
+print(msg.expandtabs(4))
+print("Name:   Pavan")
+
+msg="1\t2\t3"
+print(msg.expandtabs(3))
+print("1  2  3")
+
+msg="Hello\tWorld"
+print(msg.expandtabs(6))
+print("Hello World")
+
+msg="A\tB\tC"
+print(msg.expandtabs(2))
+print("A B C")
+
+msg="\tPython"
+print(msg.expandtabs(4))
+print("    Python")
+
+msg="hello"
+print(msg.isascii())
+print(True)
+
+msg="PYTHON123"
+print(msg.isascii())
+print(True)
+
+msg="!@#$%"
+print(msg.isascii())
+print(True)
+
+msg="Hello World"
+print(msg.isascii())
+print(True)
+
+msg="123456789"
+print(msg.isascii())
+print(True)
+
+msg=""
+print(msg.isascii())
+print(True)
+
+msg=" "
+print(msg.isascii())
+print(True)
+
+msg="Python@123"
+print(msg.isascii())
+print(True)
+
+msg="hello\nworld"
+print(msg.isascii())
+print(True)
+
+msg="café"
+print(msg.isascii())
+print(False)
+
+name="Pavan"
+age=21
+print("My name is {} and my age is {}".format(name, age))
+print("My name is Pavan and my age is 21")
+
+name="Pavan"
+course="CSE"
+print("{} is studying {}".format(name, course))
+print("Pavan is studying CSE")
+
+a=10
+b=20
+print("{} + {} = {}".format(a, b, a+b))
+print("10 + 20 = 30")
+
+print("My name is {0} and I love {1}".format("Pavan", "Python"))
+print("My name is Pavan and I love Python")
+
+print("{1} is my name and {0} is my age".format(21, "Pavan"))
+print("Pavan is my name and 21 is my age")
+
+print("{0} {0} {1}".format("Hello", "Python"))
+print("Hello Hello Python")
+
+print("Name: {name}, Age: {age}".format(name="Pavan", age=21))
+print("Name: Pavan, Age: 21")
+
+city="Mysuru"
+state="Karnataka"
+print("I live in {city}, {state}".format(city=city, state=state))
+print("I live in Mysuru, Karnataka")
+
+x=5
+y=3
+print("{0} multiplied by {1} is {2}".format(x, y, x*y))
+print("5 multiplied by 3 is 15")
+
+print("I am learning {0}, {1} and {2}".format("Python", "SQL", "HTML"))
+print("I am learning Python, SQL and HTML")
