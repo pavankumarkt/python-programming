@@ -1,0 +1,140 @@
+1. min()  
+ print(min(10, 20, 5, 30)) 
+Output: 5 
+print(min([45, 12, 89, 3])) 
+ Output: 3 
+print(min((99, 88, 77, 66, 55))) 
+ Output: 55 
+print(min("hello python", "hello mava")) 
+ Output: 'hello mava' 
+
+ print(min("python")) 
+ Output: 'h' 
+ print(min(-10.5, -20.8, -5.2)) 
+ Output: -20.8 
+print(min({100, 200, 50, 400})) 
+ Output: 50 
+print(min(["apple", "Banana", "cherry"])) 
+ Output: 'Banana' 67
+
+
+2. max() 
+print(max(10, 20, 30, 50)) 
+ Output: 50 
+print(max([10, 50, 200, 150])) 
+ Output: 200 
+print(max((5, 12, 8, 25)))
+ Output: 25 
+print(max(["HELLO", "hello"])) 
+ Output: 'hello' 
+ print(max(-5, -1, -20)) 
+Output: -1
+ print(max("programming"))
+ Output: 'r' 
+print(max(3.14, 2.71, 3.14159)) 
+ Output: 3.14159
+ print(max({"a": 1, "z": 100, "m": 50})) 
+ Output: 'z' 
+
+
+3. abs()
+ print(abs(-25)) 
+Output: 25 
+print(abs(25)) 
+ Output: 25 
+print(abs(-8.90)) 
+ Output: 8.9 
+print(abs(0))
+ Output: 0 
+ print(abs(-100 + 30)) 
+ Output: 70 
+print(abs(-3.14159)) 
+ Output: 3.14159 
+print(abs(5 - 12)) 
+ Output: 7 
+print(abs(3 + 4j)) 
+ Output: 5.0
+
+
+4. math.ceil() 
+import math
+ print(math.ceil(4.2)) 
+ Output: 5 
+print(math.ceil(4.9))
+ Output: 5 
+print(math.ceil(4.0))  
+ Output: 4 
+print(math.ceil(-4.2)) 
+ Output: -4 
+print(math.ceil(-4.8)) 
+ Output: -4 
+print(math.ceil(0.1)) 
+ Output: 1 
+print(math.ceil(10.0001)) 
+ Output: 11 
+print(math.ceil(-0.5))
+ Output: 0
+
+5. math.floor()
+import math 
+print(math.floor(4.2)) 
+ Output: 4
+ print(math.floor(4.9)) 
+ Output: 4 
+print(math.floor(4.0)) 
+ Output: 4
+ print(math.floor(-4.2)) 
+ Output: -5 
+print(math.floor(-4.8)) 
+ Output: -5 
+print(math.floor(0.9)) 
+ Output: 0 
+print(math.floor(10.999)) 
+
+
+7. chr() & ord()
+  print(chr(65)) 
+ Output: 'A' 
+print(chr(66)) 
+ Output: 'B' 
+print(chr(97)) 
+ Output: 'a' 
+print(chr(48)) 
+ Output: '0' 
+ print(ord('A')) 
+ Output: 65 
+print(ord('a')) 
+ Output: 97 
+print(ord('Z')
+ Output: 90 
+print(ord(' ')) 
+ Output: 32 
+
+
+ 'if' Statement
+
+ 1:  if True: 
+print("Good morning") 
+ Output: Good morning
+ 2:  a = 30 b = 300 if b > a: 
+print("B is greater than A") 
+ Output: B is greater than A
+ 3:  x = 8 r = x % 2 if r == 0: 
+print("It's an even number") 
+ Output: It's an even number
+ 4:name = "Python" 
+if len(name) > 5:
+ print("Name has more than 5 characters") 
+ Output: Name has more than 5 characters
+ 5:  num = -12345
+ if len(str(abs(num))) == 5:
+ print("Number has 5 digits") 
+Output: Number has 5 digits
+ 6: word = "PYTHON" 
+if word.isupper(): 
+print("The word is in uppercase") 
+Output: The word is in uppercase
+ 7:  val = "12345" 
+if val.isdigit(): 
+print("The value contains only digits") 
+Output: The value contains only digits
