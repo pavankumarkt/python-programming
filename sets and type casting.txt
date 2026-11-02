@@ -1,0 +1,250 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+# intersection
+
+s1={"car","van","bus","scooter","fight"}
+s2={"bus","ardi","benz","flight","van"}
+s1.intersection(s2)
+{'van', 'bus'}
+s2.intersection(s1)
+{'van', 'bus'}
+s1={"car","van","bus","scooter","fight"}
+s2={"bus","ardi","benz","flight","van"}
+s3={"benz","ardi","bus","bullet"}
+s1.intersection(s3)
+{'bus'}
+s2.intersection(s3)
+{'ardi', 'benz', 'bus'}
+s1.intersection(s3,s2)
+{'bus'}
+s2.intersection(s3,s1)
+{'bus'}
+s1={"car","van","bus","scooter","fight"}
+s2={"bus","ardi","benz","flight","van"}
+s1.intersection_update(s2)
+s1
+{'van', 'bus'}
+s2.intersection_update(s1)
+s2
+{'van', 'bus'}
+s1={"car","van","bus","scooter","fight"}
+s2={"bus","ardi","benz","flight","van"}
+s3={"benz","ardi","bus","bullet"}
+s2.intersection_update(s1)
+s3
+{'bullet', 'ardi', 'benz', 'bus'}
+s2.intersection_update(s3)
+s3
+{'bullet', 'ardi', 'benz', 'bus'}
+s3.intersection_update(s1)
+s3
+{'bus'}
+s3.intersection_update(s1,s2)
+s3
+{'bus'}
+ss.intersection_update(s1,s3)
+Traceback (most recent call last):
+  File "<pyshell#30>", line 1, in <module>
+    ss.intersection_update(s1,s3)
+NameError: name 'ss' is not defined. Did you mean: 's1'?
+s2.intersection_update(s1,s3)
+
+s2
+{'bus'}
+
+
+
+#type casting
+
+int(2.0)
+2
+int("hello")
+Traceback (most recent call last):
+  File "<pyshell#39>", line 1, in <module>
+    int("hello")
+ValueError: invalid literal for int() with base 10: 'hello'
+int("2,5,36,5")
+Traceback (most recent call last):
+  File "<pyshell#40>", line 1, in <module>
+    int("2,5,36,5")
+ValueError: invalid literal for int() with base 10: '2,5,36,5'
+int("25365")
+25365
+int("[25365"])
+SyntaxError: closing parenthesis ']' does not match opening parenthesis '('
+int("[25365]")
+Traceback (most recent call last):
+  File "<pyshell#43>", line 1, in <module>
+    int("[25365]")
+ValueError: invalid literal for int() with base 10: '[25365]'
+int((25365))
+25365
+int([2,5,3,6,5])
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    int([2,5,3,6,5])
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'list'
+int((2,5,3,6,5))
+Traceback (most recent call last):
+  File "<pyshell#46>", line 1, in <module>
+    int((2,5,3,6,5))
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'tuple'
+int({2,5,3,6,5})
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    int({2,5,3,6,5})
+TypeError: int() argument must be a string, a bytes-like object or a real number, not 'set'
+int("2j")
+Traceback (most recent call last):
+  File "<pyshell#48>", line 1, in <module>
+    int("2j")
+ValueError: invalid literal for int() with base 10: '2j'
+int("10"+"10")
+1010
+int("10"*9)
+101010101010101010
+
+
+
+#float
+
+float(45)
+45.0
+float(45.09)
+45.09
+float("hii")
+Traceback (most recent call last):
+  File "<pyshell#58>", line 1, in <module>
+    float("hii")
+ValueError: could not convert string to float: 'hii'
+float("124")
+124.0
+float("5+5")
+Traceback (most recent call last):
+  File "<pyshell#60>", line 1, in <module>
+    float("5+5")
+ValueError: could not convert string to float: '5+5'
+float("10"*9)
+1.0101010101010101e+17
+
+float(10/5)
+2.0
+float((25365))
+25365.0
+float((10)+(30))
+40.0
+float([1,2,3,4,0])
+Traceback (most recent call last):
+  File "<pyshell#65>", line 1, in <module>
+    float([1,2,3,4,0])
+TypeError: float() argument must be a string or a real number, not 'list'
+float((1,2,3,4,0))
+Traceback (most recent call last):
+  File "<pyshell#66>", line 1, in <module>
+    float((1,2,3,4,0))
+TypeError: float() argument must be a string or a real number, not 'tuple'
+float({1,2,3,4,0})
+Traceback (most recent call last):
+  File "<pyshell#67>", line 1, in <module>
+    float({1,2,3,4,0})
+TypeError: float() argument must be a string or a real number, not 'set'
+
+
+#bool()
+
+bool(0)
+False
+bool(p)
+Traceback (most recent call last):
+  File "<pyshell#73>", line 1, in <module>
+    bool(p)
+NameError: name 'p' is not defined
+bool("p")
+True
+bool([1,23,4,5])
+True
+bool((1,2,3,4,0))
+True
+bool({1,2,3,4,0})
+True
+bool([10,20,30]+{10,20,30})
+Traceback (most recent call last):
+  File "<pyshell#78>", line 1, in <module>
+    bool([10,20,30]+{10,20,30})
+TypeError: can only concatenate list (not "set") to list
+
+
+#complex
+
+complex(0)
+0j
+complex(0,4)
+4j
+
+complex(6,4)
+(6+4j)
+complex(6,4,8)
+Traceback (most recent call last):
+  File "<pyshell#86>", line 1, in <module>
+    complex(6,4,8)
+TypeError: complex() takes at most 2 arguments (3 given)
+complex("987")
+(987+0j)
+(987+0j)
+(987+0j)
+
+
+#str
+str("hii")
+'hii'
+str(462)
+'462'
+>>> str([1,23,4,5])
+'[1, 23, 4, 5]'
+>>> str((1,2,3,4,0))
+'(1, 2, 3, 4, 0)'
+>>> str({1,2,3,4,0})
+'{0, 1, 2, 3, 4}'
+>>> str('[10,20,30]+[10,20,30]')
+'[10,20,30]+[10,20,30]'
+>>> 
+>>> 
+
+>>> #list
+>>> 
+>>> list("hello royyal")
+['h', 'e', 'l', 'l', 'o', ' ', 'r', 'o', 'y', 'y', 'a', 'l']
+>>> list(126542)
+Traceback (most recent call last):
+  File "<pyshell#103>", line 1, in <module>
+    list(126542)
+TypeError: 'int' object is not iterable
+>>> list("12654")
+['1', '2', '6', '5', '4']
+>>> list([1,23,4,5])
+[1, 23, 4, 5]
+>>> list((1,2,3,4,0))
+[1, 2, 3, 4, 0]
+>>> list({10:20,30:40,50:90})
+[10, 30, 50]
+>>> 
+>>> 
+>>> #tuple
+>>> 
+>>> tuple("hello python")
+('h', 'e', 'l', 'l', 'o', ' ', 'p', 'y', 't', 'h', 'o', 'n')
+>>> tuple([1,2,3,4,5])
+(1, 2, 3, 4, 5)
+>>> tuple({10:20,30:40,50:90})
+(10, 30, 50)
+>>> 
+>>> 
+>>> #sets
+>>> 
+>>> set("12345")
+{'2', '5', '4', '3', '1'}
+>>> set([1,2,3,4,5])
+{1, 2, 3, 4, 5}
+>>> set({10:20,30:40,50:90})
+... 
+{10, 50, 30}
