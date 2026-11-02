@@ -1,0 +1,80 @@
+char=input("enter char:")
+if(ord("A")<=ord(char)<=ord("Z")):
+    print(f"{char} is in uppercase")
+    
+
+num=int(input("enter number:"))
+if(ord("0")<=ord(str(num))<=ord("9")):
+    print(f"{num} is a number")
+    
+
+char=input("Enter a character: ")
+if not (ord("a") <= ord(char) <= ord("z") or 
+ord("A") <= ord(char) <= ord("Z")or
+ord("0") <= ord(char) <= ord("9")):
+    print(F"{char} is a special character")
+
+
+string=input("Enter a character: ")
+if string.lower()[-1] in 'aeiou':
+    print(f"{string} ends with a vowel.")
+
+
+string=input("Enter a string: ")
+if string.lower()==string.lower()[::-1]:
+    print("The string is a palindrome.")
+
+
+num = int(input("enter number:"))
+if abs(num)==num:
+    print("The number is positive")
+else:
+    print("The number is negative")
+
+
+num = int(input("enter number:"))
+string=input("enter string:")
+if num % len(string) == 0:
+    print("The number is divisible by the length of the string.")
+else:
+    print("The number is not divisible by the length of the string.")
+
+
+a,b,c=int(input("Enter three integers: ").split())
+max_num=max(a,b,c)
+if max_num %2==0:
+    print(f"The maximum number {max_num} is even.")
+else:
+    print(f"The maximum number {max_num} is odd.")
+
+
+stock=int(input("Enter the stock quantity: "))
+req_quantity=int(input("Enter the required quantity: "))
+if req_quantity>0:
+    if req_quantity<=stock:
+        print("Order placed successfully.")
+    else:
+        print("Out of stock.")
+else:
+    print("Invalid quantity. Please enter a positive number.")
+
+
+char=input("Enter char:")
+if char.isalnum():
+    print("It is Alphanum")
+else:
+    print("It not Alphanum")
+
+
+str1=input("Enter first string: ")
+str2=input("Enter a second string: ")
+if  len(str1) == len(str2):
+    print("Both string have same length")
+else:
+    print("Both has different length")
+
+
+string=input("Enter string: ")
+if string.lower()[0] in "aeiou":
+    print(f"{string} starts with vowel")
+
