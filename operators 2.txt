@@ -1,0 +1,273 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+# operators
+
+a=10
+b=20
+a+b
+30
+
+a-b
+-10
+a*b
+200
+
+\
+a/b
+0.5
+a//b
+0
+(1,2,3)+(4,5,6)
+(1, 2, 3, 4, 5, 6)
+[1,2,3]+[4,5,6]
+[1, 2, 3, 4, 5, 6]
+[1+2+3]+[4+5+6]
+[6, 15]
+[1+2+3]+(4+5+6)
+Traceback (most recent call last):
+  File "<pyshell#14>", line 1, in <module>
+    [1+2+3]+(4+5+6)
+TypeError: can only concatenate list (not "int") to list
+(1,2,3,4,5,6)*5
+(1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6)
+[1,2,3,4,5,6]*5
+[1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6, 1, 2, 3, 4, 5, 6]
+a%b
+10
+a**b
+100000000000000000000
+
+#assignment operator
+
+x=20
+
+x
+20
+
+x+=5
+x
+25
+\
+x-=5
+x
+20
+
+x*=5
+x
+100
+x/=5
+x
+20.0
+
+
+x//=5
+x
+4.0
+x**=5
+x
+1024.0
+x5=5
+x
+1024.0
+x%=5
+x
+4.0
+x>>=5
+Traceback (most recent call last):
+  File "<pyshell#45>", line 1, in <module>
+    x>>=5
+TypeError: unsupported operand type(s) for >>=: 'float' and 'int'
+x=>>5
+SyntaxError: invalid syntax
+x>>5
+Traceback (most recent call last):
+  File "<pyshell#47>", line 1, in <module>
+    x>>5
+TypeError: unsupported operand type(s) for >>: 'float' and 'int'
+x>>45
+Traceback (most recent call last):
+  File "<pyshell#48>", line 1, in <module>
+    x>>45
+TypeError: unsupported operand type(s) for >>: 'float' and 'int'
+\
+x>>2.94
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    x>>2.94
+TypeError: unsupported operand type(s) for >>: 'float' and 'float'
+\
+x=2.756
+x>>3
+Traceback (most recent call last):
+  File "<pyshell#51>", line 1, in <module>
+    x>>3
+TypeError: unsupported operand type(s) for >>: 'float' and 'int'
+x=2.756
+x
+2.756
+x>>2.94
+Traceback (most recent call last):
+  File "<pyshell#54>", line 1, in <module>
+    x>>2.94
+TypeError: unsupported operand type(s) for >>: 'float' and 'float'
+x=32
+x<<2
+128
+x>>2
+8
+
+
+#comparison
+
+
+x=10
+y=20
+x==y
+False
+x>=y
+False
+x<=y
+True
+x<y
+True
+x>y
+False
+False
+False
+{"empname":"ram","empid":1234} =={"empname":"seetha","empid":0987}
+SyntaxError: leading zeros in decimal integer literals are not permitted; use an 0o prefix for octal integers
+{"empname":"ram","empid":1234} =={"empname":"seetha","empid":987}
+False
+
+
+#logical operator
+
+1 and 2
+2
+1 & 1
+1
+1 &2
+0
+x=25
+print(x==20)
+False
+print(x&20)
+16
+
+ 
+
+
+#bitwise operator
+
+~20
+-21
+compliment
+Traceback (most recent call last):
+  File "<pyshell#89>", line 1, in <module>
+    compliment
+NameError: name 'compliment' is not defined
+#compliment
+~23
+-24
+~56
+-57
+~56
+-57
+~12
+-13
+~2134
+-2135
+
+
+12&13
+12
+23&34
+2
+26&24
+24
+23&27
+19
+23&30
+22
+
+
+20 | 10
+30
+10 | 11
+11
+10 | 12
+14
+
+12 ^ 13
+1
+13 ^59
+54
+
+
+
+10<< 2
+40
+
+24<<5
+768
+
+
+# membership
+
+
+1.00 in (1,2,3,4,5,6,7,8,9,10)
+
+True
+1.00 in [1,2,3,4,5,6,7,8,9,10]
+True
+15.00 in [1,2,3,4,5,6,7,8,9,10]
+False
+15.00 in {1,2,3,4,5,6,7,8,9,10}
+False
+>>> 1.00 in {1,2,3,4,5,6,7,8,9,10}
+True
+>>> listdata=[10,20,30,40,[99,"hello",88,10,20,30,77,"python",66,55]]
+>>> 40 in listdata
+True
+>>> [100,200,300] in [10,20,30,[100,200,300]]
+True
+>>> {"empname":"ram","empid":12345,"empphone":912345678,"empadress":"Banglore"}["empname"]in["ram","seetha","hanuman"]
+... 
+True
+>>> 1.00 not in [1,2,3,4,5,6,7,8,9,10]
+False
+>>> 19086.00 not in [1,2,3,4,5,6,7,8,9,10]
+True
+>>> 
+>>> 
+>>> 
+>>> # identity operator
+>>> 
+>>> p1=34
+>>> p2=37
+>>> p3=34
+>>> 
+>>> p1 is p3
+True
+>>> p1 is p
+Traceback (most recent call last):
+  File "<pyshell#145>", line 1, in <module>
+    p1 is p
+NameError: name 'p' is not defined. Did you mean: 'p1'?
+>>> 2
+2
+>>> p1 is p2
+False
+>>> id(p1)
+140733737192920
+>>> id(p2)
+140733737193016
+>>> id(p3)
+140733737192920
+>>> 
+>>> p1 is not p2
+True
+>>> True
+True
+>>> p1 is not p3
+False
