@@ -1,0 +1,161 @@
+
+
+numbers = [2, 4, 6, 8, 10]
+result = [x**2 for x in numbers]
+print(result)
+
+Output:
+[4, 16, 36, 64, 100]
+
+
+numbers = [10, 15, 20, 25, 30, 35, 40]
+result = [x for x in numbers if x % 2 == 0]
+print(result)
+
+Output:
+[10, 20, 30, 40]
+
+
+n = int(input("Enter a number: "))
+result = [n * i for i in range(1, 11)]
+print(result)
+
+Example Output:
+Enter a number: 5
+[5, 10, 15, 20, 25, 30, 35, 40, 45, 50]
+
+
+list1 = [10, 20, 30, 40]
+list2 = [1, 2, 3, 4]
+result = [x + y for x, y in zip(list1, list2)]
+print(result)
+
+Output:
+[11, 22, 33, 44]
+
+
+words = ["python", "java", "sql", "react"]
+result = [word.upper() for word in words]
+print(result)
+
+Output:
+['PYTHON', 'JAVA', 'SQL', 'REACT']
+
+
+words = ["apple", "banana", "orange", "grapes", "elephant", "india"]
+result = [word for word in words if word[0].lower() in "aeiou"]
+print(result)
+
+Output:
+['apple', 'orange', 'elephant', 'india']
+
+
+numbers = [-10, 20, -5, 30, -2, 40]
+result = [x for x in numbers if x > 0]
+print(result)
+
+Output:
+[20, 30, 40]
+
+
+words = ["python", "java", "apple", "hello"]
+result = [word[::-1] for word in words]
+print(result)
+
+Output:
+['nohtyp', 'avaj', 'elppa', 'olleh']
+
+
+
+numbers = [1, 2, 3, 4, 5, 6]
+result = [x**2 if x % 2 == 0 else x**3 for x in numbers]
+print(result)
+
+Output:
+[1, 4, 27, 16, 125, 36]
+
+
+numbers = [10, -5, 20, -3, 30, -8]
+result = [x if x >= 0 else 0 for x in numbers]
+print(result)
+
+Output:
+[10, 0, 20, 0, 30, 0]
+
+
+words = ["python", "java", "c", "django", "sql"]
+result = [word + "#" if len(word) % 2 == 0 else word for word in words]
+print(result)
+
+Output:
+['python#', 'java#', 'c', 'django#', 'sql']
+
+
+
+numbers = [1, 2, 2, 3, 4, 4, 5, 5]
+result = {x for x in numbers}
+print(result)
+
+Output:
+{1, 2, 3, 4, 5}
+
+Note: The order of elements in a set is not guaranteed.
+
+
+numbers = [2, 3, 2, 4, 3, 5]
+result = {x**2 for x in numbers}
+print(result)
+
+Output:
+{4, 9, 16, 25}
+
+
+words = ["apple", "banana", "orange", "elephant", "apple", "india"]
+result = {word for word in words if word[0].lower() in "aeiou"}
+print(result)
+
+Example Output:
+{'apple', 'orange', 'elephant', 'india'}
+
+Note: Set output order may vary.
+
+
+
+marks = [65, 70, 80, 55, 90]
+result = [mark + 5 for mark in marks]
+print(result)
+
+Output:
+[70, 75, 85, 60, 95]
+
+
+marks = [25, 45, 30, 80, 55, 20, 90]
+passed = [mark for mark in marks if mark >= 35]
+print(passed)
+
+Output:
+[45, 80, 55, 90]
+
+
+prices = [100, 200, 500, 1000]
+discounted = [price * 0.90 for price in prices]
+print(discounted)
+
+Output:
+[90.0, 180.0, 450.0, 900.0]
+
+
+emails = [
+    "pavan@gmail.com",
+    "student@yahoo.com",
+    "developer@outlook.com"
+]
+usernames = [email.split("@")[0] for email in emails]
+print(usernames)
+
+Output:
+['pavan', 'student', 'developer']
+
+
+
+
