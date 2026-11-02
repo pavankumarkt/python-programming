@@ -1,0 +1,227 @@
+listdata = [10, 20, 30]
+listdata.append(40)
+print(listdata)
+
+data = ["python", "java"]
+data.append("c++")
+print(data)
+
+data = [1, 2, 3]
+data.append([4, 5])
+print(data)
+
+data = ["hello", 10, True]
+data.append(25.5)
+print(data)
+
+data = []
+data.append("python")
+print(data)
+
+data = [10, 20]
+data.append((30, 40))
+print(data)
+
+data = ["c", "c++"]
+data.append(["java", "python"])
+print(data)
+
+data = [100, 200]
+data.append(False)
+print(data)
+
+data = ["red", "blue"]
+data.append("green")
+data.append("yellow")
+print(data)
+
+data = [10, 20, 30]
+data.append({"name": "Pavan"})
+print(data)
+
+
+data = [10, 20, 30]
+data.extend([40, 50])
+print(data)
+
+data = ["python", "java"]
+data.extend(["c", "c++"])
+print(data)
+
+data = [1, 2]
+data.extend((3, 4, 5))
+print(data)
+
+data = ["hello"]
+data.extend("python")
+print(data)
+
+data = [10, 20]
+data.extend({30, 40})
+print(data)
+
+data = ["a", "b"]
+data.extend(["c", "d", "e"])
+print(data)
+
+data = [100]
+data.extend((200, 300))
+print(data)
+
+data = []
+data.extend("hello")
+print(data)
+
+data = [1, 2, 3]
+data.extend([4])
+print(data)
+
+data = ["c", "python"]
+data.extend({"name": "Pavan", "id": 101})
+print(data)
+
+
+data = [10, 20, 30, 40, 50]
+data.pop()
+print(data)
+
+data = ["c", "c++", "python", "java"]
+data.pop()
+print(data)
+
+data = [10, 20, 30]
+data.pop(0)
+print(data)
+
+data = ["a", "b", "c", "d"]
+data.pop(2)
+print(data)
+
+data = [100, 200, 300, 400]
+data.pop(-1)
+print(data)
+
+data = ["python", "java", "c++"]
+data.pop(-2)
+print(data)
+
+data = [10, 20, 30, 40]
+x = data.pop()
+print(x)
+print(data)
+
+data = ["hello", "world"]
+x = data.pop(0)
+print(x)
+print(data)
+
+data = [1, 2, 3, 4, 5]
+data.pop(3)
+print(data)
+
+data = ["c", "c++", "c#", "python", "java"]
+data.pop(1)
+print(data)
+
+
+data = [10, 20, 30, 20]
+data.remove(20)
+print(data)
+
+data = ["c", "c++", "python", "java"]
+data.remove("python")
+print(data)
+
+data = ["apple", "banana", "orange"]
+data.remove("banana")
+print(data)
+
+data = [1, 2, 3, 4, 5]
+data.remove(5)
+print(data)
+
+data = ["hello", "python", "python"]
+data.remove("python")
+print(data)
+
+data = [10, 20, 30, 40]
+data.remove(10)
+print(data)
+
+data = ["red", "blue", "green"]
+data.remove("blue")
+print(data)
+
+data = [100, 200, 300]
+data.remove(200)
+print(data)
+
+data = [[10, 20], [30, 40], [50, 60]]
+data.remove([30, 40])
+print(data)
+
+data = ["c", ["python", "java"], "c++"]
+data[1].remove("java")
+print(data)
+
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[0])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[1])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[2])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[-1])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[-2])
+
+data = [10, 20, 30, 40, 50]
+print(data[0])
+
+data = [10, 20, 30, 40, 50]
+print(data[4])
+
+data = ["python", ["java", "c++"], "html"]
+print(data[1])
+
+data = ["python", ["java", "c++"], "html"]
+print(data[1][0])
+
+data = ["python", ["java", "c++"], "html"]
+print(data[1][1])
+
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[0:3])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[1:4])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[:3])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[2:])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[:])
+
+data = [10, 20, 30, 40, 50]
+print(data[0:5:2])
+
+data = [10, 20, 30, 40, 50]
+print(data[1:5:2])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[-4:-1])
+
+data = ["c", "c++", "c#", "python", "java"]
+print(data[::-1])
+
+data = [10, 20, 30, 40, 50]
+print(data[4:1:-1])
