@@ -1,0 +1,852 @@
+PYTHON BEGINNER SOLUTIONS
+Questions on while Loop, Nested while Loop, and Basic Python
+
+============================================================
+PART A: WHILE LOOP AND NESTED WHILE LOOP
+============================================================
+
+1. Print numbers from 1 to 100 divisible by both 3 and 5
+
+i = 1
+
+while i <= 100:
+    if i % 3 == 0 and i % 5 == 0:
+        print(i)
+    i = i + 1
+
+
+2. Sum of all even numbers between 1 and 100
+
+i = 1
+total = 0
+
+while i <= 100:
+    if i % 2 == 0:
+        total = total + i
+    i = i + 1
+
+print(total)
+
+
+3. Reverse a given number
+
+num = int(input("Enter a number: "))
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+print("Reverse:", reverse)
+
+
+4. Check whether a number is a palindrome
+
+num = int(input("Enter a number: "))
+original = num
+reverse = 0
+
+while num > 0:
+    digit = num % 10
+    reverse = reverse * 10 + digit
+    num = num // 10
+
+if original == reverse:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+5. Count the number of digits in a number
+
+num = int(input("Enter a number: "))
+
+if num == 0:
+    count = 1
+else:
+    count = 0
+    while num > 0:
+        count = count + 1
+        num = num // 10
+
+print("Number of digits:", count)
+
+
+6. Sum of all digits of a number
+
+num = int(input("Enter a number: "))
+total = 0
+
+while num > 0:
+    digit = num % 10
+    total = total + digit
+    num = num // 10
+
+print("Sum of digits:", total)
+
+
+7. Find the largest digit in a number
+
+num = int(input("Enter a number: "))
+largest = 0
+
+while num > 0:
+    digit = num % 10
+
+    if digit > largest:
+        largest = digit
+
+    num = num // 10
+
+print("Largest digit:", largest)
+
+
+8. Find the smallest digit in a number
+
+num = int(input("Enter a number: "))
+
+if num == 0:
+    smallest = 0
+else:
+    smallest = 9
+
+    while num > 0:
+        digit = num % 10
+
+        if digit < smallest:
+            smallest = digit
+
+        num = num // 10
+
+print("Smallest digit:", smallest)
+
+
+9. Count even and odd digits in a number
+
+num = int(input("Enter a number: "))
+even = 0
+odd = 0
+
+while num > 0:
+    digit = num % 10
+
+    if digit % 2 == 0:
+        even = even + 1
+    else:
+        odd = odd + 1
+
+    num = num // 10
+
+print("Even digits:", even)
+print("Odd digits:", odd)
+
+
+10. Calculate factorial of a number
+
+num = int(input("Enter a number: "))
+factorial = 1
+i = 1
+
+while i <= num:
+    factorial = factorial * i
+    i = i + 1
+
+print("Factorial:", factorial)
+
+
+11. Generate first 15 Fibonacci numbers
+
+a = 0
+b = 1
+count = 1
+
+while count <= 15:
+    print(a)
+    c = a + b
+    a = b
+    b = c
+    count = count + 1
+
+
+12. Check whether a number is an Armstrong number
+
+num = int(input("Enter a number: "))
+original = num
+temp = num
+count = 0
+
+while temp > 0:
+    count = count + 1
+    temp = temp // 10
+
+temp = num
+total = 0
+
+while temp > 0:
+    digit = temp % 10
+    total = total + digit ** count
+    temp = temp // 10
+
+if total == original:
+    print("Armstrong number")
+else:
+    print("Not an Armstrong number")
+
+
+13. Check whether a number is a perfect number
+
+num = int(input("Enter a number: "))
+i = 1
+total = 0
+
+while i < num:
+    if num % i == 0:
+        total = total + i
+    i = i + 1
+
+if total == num:
+    print("Perfect number")
+else:
+    print("Not a perfect number")
+
+
+14. Find all factors of a number
+
+num = int(input("Enter a number: "))
+i = 1
+
+while i <= num:
+    if num % i == 0:
+        print(i)
+    i = i + 1
+
+
+15. Calculate GCD of two numbers
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+while b != 0:
+    remainder = a % b
+    a = b
+    b = remainder
+
+print("GCD:", a)
+
+
+16. Calculate LCM of two numbers
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+x = a
+y = b
+
+while y != 0:
+    remainder = x % y
+    x = y
+    y = remainder
+
+gcd = x
+lcm = (a * b) // gcd
+
+print("LCM:", lcm)
+
+
+17. Count vowels in a string
+
+text = input("Enter a string: ")
+i = 0
+count = 0
+
+while i < len(text):
+    if text[i] in "aeiouAEIOU":
+        count = count + 1
+    i = i + 1
+
+print("Number of vowels:", count)
+
+
+18. Reverse a string without slicing
+
+text = input("Enter a string: ")
+i = len(text) - 1
+reverse = ""
+
+while i >= 0:
+    reverse = reverse + text[i]
+    i = i - 1
+
+print("Reverse:", reverse)
+
+
+19. Check whether a string is a palindrome
+
+text = input("Enter a string: ")
+i = len(text) - 1
+reverse = ""
+
+while i >= 0:
+    reverse = reverse + text[i]
+    i = i - 1
+
+if text == reverse:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+20. Find frequency of a character in a string
+
+text = input("Enter a string: ")
+char = input("Enter a character: ")
+
+i = 0
+count = 0
+
+while i < len(text):
+    if text[i] == char:
+        count = count + 1
+    i = i + 1
+
+print("Frequency:", count)
+
+
+21. Print multiplication tables from 1 to 10
+
+i = 1
+
+while i <= 10:
+    j = 1
+
+    while j <= 10:
+        print(i, "x", j, "=", i * j)
+        j = j + 1
+
+    print()
+    i = i + 1
+
+
+22. Find all prime numbers between 1 and 100
+
+num = 2
+
+while num <= 100:
+    divisor = 2
+    count = 0
+
+    while divisor < num:
+        if num % divisor == 0:
+            count = count + 1
+        divisor = divisor + 1
+
+    if count == 0:
+        print(num)
+
+    num = num + 1
+
+
+23. Find all pairs between 1 and 50 whose sum is 50
+
+i = 1
+
+while i <= 50:
+    j = 1
+
+    while j <= 50:
+        if i + j == 50:
+            print(i, j)
+        j = j + 1
+
+    i = i + 1
+
+
+24. Find pairs where first number is divisible by second number
+
+i = 1
+
+while i <= 50:
+    j = 1
+
+    while j <= 50:
+        if i % j == 0:
+            print(i, j)
+        j = j + 1
+
+    i = i + 1
+
+
+25. Find common factors of two numbers
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+i = 1
+
+while i <= a:
+    j = 1
+
+    while j <= b:
+        if i == j and a % i == 0 and b % j == 0:
+            print(i)
+        j = j + 1
+
+    i = i + 1
+
+
+26. Find common elements between two lists without using 'in'
+
+list1 = [10, 20, 30, 40]
+list2 = [20, 40, 50, 60]
+
+i = 0
+
+while i < len(list1):
+    j = 0
+
+    while j < len(list2):
+        if list1[i] == list2[j]:
+            print(list1[i])
+        j = j + 1
+
+    i = i + 1
+
+
+27. Compare every element of two lists and count equal elements
+
+list1 = [10, 20, 30, 40]
+list2 = [20, 30, 50, 40]
+
+i = 0
+count = 0
+
+while i < len(list1):
+    j = 0
+
+    while j < len(list2):
+        if list1[i] == list2[j]:
+            count = count + 1
+        j = j + 1
+
+    i = i + 1
+
+print("Equal elements:", count)
+
+
+28. Find duplicate elements in a list without set()
+
+numbers = [10, 20, 30, 20, 40, 10, 50]
+
+i = 0
+
+while i < len(numbers):
+    j = i + 1
+
+    while j < len(numbers):
+        if numbers[i] == numbers[j]:
+            print("Duplicate:", numbers[i])
+            break
+        j = j + 1
+
+    i = i + 1
+
+
+29. Find second-largest number without sort() or max()
+
+numbers = [10, 50, 30, 80, 60]
+
+largest = numbers[0]
+second = numbers[0]
+
+i = 1
+
+while i < len(numbers):
+    if numbers[i] > largest:
+        second = largest
+        largest = numbers[i]
+    elif numbers[i] > second and numbers[i] != largest:
+        second = numbers[i]
+
+    i = i + 1
+
+print("Largest:", largest)
+print("Second largest:", second)
+
+
+30. Check whether two numbers are relatively prime
+
+a = int(input("Enter first number: "))
+b = int(input("Enter second number: "))
+
+x = a
+y = b
+
+while y != 0:
+    remainder = x % y
+    x = y
+    y = remainder
+
+if x == 1:
+    print("Relatively prime")
+else:
+    print("Not relatively prime")
+
+
+============================================================
+PART B: BASIC PYTHON DATA TYPES
+============================================================
+
+1. Check whether an integer is positive, negative, or zero
+
+num = int(input("Enter a number: "))
+
+if num > 0:
+    print("Positive")
+elif num < 0:
+    print("Negative")
+else:
+    print("Zero")
+
+
+2. Convert an integer into a float
+
+num = 10
+float_num = float(num)
+
+print("Integer value:", num)
+print("Integer type:", type(num))
+
+print("Float value:", float_num)
+print("Float type:", type(float_num))
+
+
+3. Arithmetic operations using two numbers
+
+a = 10
+b = 3
+
+print("Addition:", a + b)
+print("Subtraction:", a - b)
+print("Multiplication:", a * b)
+print("Division:", a / b)
+print("Floor Division:", a // b)
+print("Modulus:", a % b)
+print("Exponentiation:", a ** b)
+
+
+4. Round a float to 2 decimal places without changing original value
+
+num = 12.34567
+
+rounded_num = round(num, 2)
+
+print("Original value:", num)
+print("Rounded value:", rounded_num)
+
+
+5. Display real and imaginary parts of a complex number
+
+num = 5 + 3j
+
+print("Complex number:", num)
+print("Real part:", num.real)
+print("Imaginary part:", num.imag)
+
+
+6. Count vowels, consonants, digits, and spaces
+
+text = input("Enter a string: ")
+
+vowels = 0
+consonants = 0
+digits = 0
+spaces = 0
+
+i = 0
+
+while i < len(text):
+    ch = text[i]
+
+    if ch in "aeiouAEIOU":
+        vowels = vowels + 1
+    elif ch >= "0" and ch <= "9":
+        digits = digits + 1
+    elif ch == " ":
+        spaces = spaces + 1
+    elif (ch >= "a" and ch <= "z") or (ch >= "A" and ch <= "Z"):
+        consonants = consonants + 1
+
+    i = i + 1
+
+print("Vowels:", vowels)
+print("Consonants:", consonants)
+print("Digits:", digits)
+print("Spaces:", spaces)
+
+
+7. Reverse a string without slicing
+
+text = input("Enter a string: ")
+reverse = ""
+i = len(text) - 1
+
+while i >= 0:
+    reverse = reverse + text[i]
+    i = i - 1
+
+print("Reverse:", reverse)
+
+
+8. Check string palindrome without slicing
+
+text = input("Enter a string: ")
+reverse = ""
+i = len(text) - 1
+
+while i >= 0:
+    reverse = reverse + text[i]
+    i = i - 1
+
+if text == reverse:
+    print("Palindrome")
+else:
+    print("Not a palindrome")
+
+
+9. Frequency of each character using dictionary
+
+text = input("Enter a string: ")
+
+frequency = {}
+i = 0
+
+while i < len(text):
+    ch = text[i]
+
+    if ch in frequency:
+        frequency[ch] = frequency[ch] + 1
+    else:
+        frequency[ch] = 1
+
+    i = i + 1
+
+print(frequency)
+
+
+10. Remove duplicate elements while maintaining original order
+
+numbers = [10, 20, 10, 30, 20, 40]
+
+new_list = []
+i = 0
+
+while i < len(numbers):
+    found = False
+    j = 0
+
+    while j < len(new_list):
+        if numbers[i] == new_list[j]:
+            found = True
+            break
+        j = j + 1
+
+    if found == False:
+        new_list.append(numbers[i])
+
+    i = i + 1
+
+print(new_list)
+
+
+11. Find second-largest number without sort() or sorted()
+
+numbers = [10, 50, 30, 80, 60]
+
+largest = numbers[0]
+second = numbers[0]
+
+i = 1
+
+while i < len(numbers):
+    if numbers[i] > largest:
+        second = largest
+        largest = numbers[i]
+    elif numbers[i] > second and numbers[i] != largest:
+        second = numbers[i]
+
+    i = i + 1
+
+print("Second largest:", second)
+
+
+12. Find common elements between two lists without sets
+
+list1 = [10, 20, 30, 40]
+list2 = [20, 40, 50, 60]
+
+common = []
+
+i = 0
+
+while i < len(list1):
+    j = 0
+
+    while j < len(list2):
+        if list1[i] == list2[j]:
+            common.append(list1[i])
+            break
+        j = j + 1
+
+    i = i + 1
+
+print("Common elements:", common)
+
+
+13. Convert tuple to list, modify it, and convert back
+
+my_tuple = (10, 20, 30)
+
+my_list = list(my_tuple)
+
+my_list.append(40)
+
+my_tuple = tuple(my_list)
+
+print("Final tuple:", my_tuple)
+
+
+14. Find maximum and minimum in a tuple without max() and min()
+
+numbers = (10, 50, 30, 80, 20)
+
+largest = numbers[0]
+smallest = numbers[0]
+
+i = 1
+
+while i < len(numbers):
+    if numbers[i] > largest:
+        largest = numbers[i]
+
+    if numbers[i] < smallest:
+        smallest = numbers[i]
+
+    i = i + 1
+
+print("Maximum:", largest)
+print("Minimum:", smallest)
+
+
+15. Create a set from a list and identify duplicate values
+
+numbers = [10, 20, 30, 20, 40, 10, 50]
+
+my_set = set(numbers)
+duplicates = []
+
+i = 0
+
+while i < len(numbers):
+    count = 0
+    j = 0
+
+    while j < len(numbers):
+        if numbers[i] == numbers[j]:
+            count = count + 1
+        j = j + 1
+
+    if count > 1 and numbers[i] not in duplicates:
+        duplicates.append(numbers[i])
+
+    i = i + 1
+
+print("Set:", my_set)
+print("Duplicates:", duplicates)
+
+
+16. Union, intersection, difference, symmetric difference
+
+set1 = {1, 2, 3, 4}
+set2 = {3, 4, 5, 6}
+
+print("Union:", set1 | set2)
+print("Intersection:", set1 & set2)
+print("Difference:", set1 - set2)
+print("Symmetric Difference:", set1 ^ set2)
+
+
+17. Student names and marks, find highest marks
+
+students = {
+    "Pavan": 85,
+    "Rahul": 90,
+    "Kiran": 78,
+    "Arun": 95
+}
+
+highest_name = ""
+highest_marks = 0
+
+for name in students:
+    if students[name] > highest_marks:
+        highest_marks = students[name]
+        highest_name = name
+
+print("Student with highest marks:", highest_name)
+print("Marks:", highest_marks)
+
+
+18. Merge two dictionaries without update()
+
+dict1 = {"a": 10, "b": 20}
+dict2 = {"c": 30, "d": 40}
+
+merged = {}
+
+for key in dict1:
+    merged[key] = dict1[key]
+
+for key in dict2:
+    merged[key] = dict2[key]
+
+print(merged)
+
+
+19. Nested dictionary and access each value
+
+student = {
+    "name": "Pavan",
+    "age": 21,
+    "course": "CSE",
+    "marks": 85
+}
+
+print("Name:", student["name"])
+print("Age:", student["age"])
+print("Course:", student["course"])
+print("Marks:", student["marks"])
+
+
+20. Demonstrate mutable and immutable data types
+
+# List is mutable
+my_list = [10, 20, 30]
+my_list[0] = 100
+print("List:", my_list)
+
+# Tuple is immutable
+my_tuple = (10, 20, 30)
+print("Tuple:", my_tuple)
+
+# String is immutable
+my_string = "Hello"
+print("String:", my_string)
+
+# Set is mutable
+my_set = {10, 20, 30}
+my_set.add(40)
+print("Set:", my_set)
+
+# List and set can be changed after creation.
+# Tuple and string cannot be changed directly.
