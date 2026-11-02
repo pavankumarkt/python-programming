@@ -1,0 +1,82 @@
+1. Arithmetic Operators
+Addition & Subtraction
++ -
+10 + 20 → 30
+"Hello " + "World" → 'Hello World'
+25 - 10 → 15
+Multiplication & Division
+* /
+5 * 4 → 20
+"Hi" * 3 → 'HiHiHi'
+15 / 4 → 3.75
+Modulus & Floor Division
+% //
+10 % 3 → 1 (Remainder)
+10 // 3 → 3 (Floored int)
+Exponentiation
+**
+2 ** 3 → 8
+5 ** 2 → 25
+
+
+2. Assignment Operators
+Assign & Add-Assign
+= +=
+x = 10 → x becomes 10
+x += 5 → x becomes 15
+Subtract-Assign & Multiply
+-= *=
+x -= 3 → x becomes 12
+x *= 2 → x becomes 24
+Divide-Assign
+/=
+x /= 4 → x becomes 6.0
+
+
+3. Comparison Operators
+Equal & Not Equal
+== !=
+5 == 5 → True
+10 != 5 → True
+Greater Than & Less Than
+> <
+10 > 20 → False
+4 < 9 → True
+Greater Than or Equal To
+>=
+7 >= 7 → True
+
+4. Logical Operators 
+Logical AND
+and
+(5 > 2) and (8 > 3) → True
+(5 > 2) and (8 < 3) → False
+Logical OR & NOT
+or not
+(5 < 2) or (8 > 3) → True
+(5 < 2) or (8 < 3) → False
+not(5 > 2) → False
+
+
+
+5. Identity Operators
+Used to compare objects to check if they occupy the same memory location, rather than comparing values.
+
+Identity Check
+is
+Returns True if both variables reference the exact same object.
+
+Non-Identity Check
+is not
+Returns True if both variables reference different objects.
+
+
+6. Membership Operators
+
+In Operator
+in
+Returns True if the element exists in the iterable object.
+
+Not In Operator
+not in
+Returns True if the element does not exist in the iterable object.
