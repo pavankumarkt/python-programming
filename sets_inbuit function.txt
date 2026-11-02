@@ -1,0 +1,342 @@
+Python 3.12.0 (tags/v3.12.0:0fb18b0, Oct  2 2023, 13:03:39) [MSC v.1935 64 bit (AMD64)] on win32
+Type "help", "copyright", "credits" or "license()" for more information.
+s1=set()
+
+s1
+set()
+s1={1,2,3,4,"py","char","war",1.223.}
+SyntaxError: incomplete input
+s1={1,2,3,4,"py","char","war",1.223}
+s1
+{1.223, 'char', 1, 2, 3, 4, 'py', 'war'}
+
+#add()
+s1.add(8)
+s1
+{1.223, 'char', 1, 2, 3, 4, 8, 'py', 'war'}
+s1.add(100)
+s1
+{1.223, 'char', 1, 2, 3, 4, 100, 8, 'py', 'war'}
+s1.add("done")
+s1
+{1.223, 'char', 1, 2, 3, 4, 100, 8, 'py', 'done', 'war'}
+s1.add((10,20,30,50))
+s1
+{1.223, 'char', 1, 2, 3, 4, 100, 8, 'py', (10, 20, 30, 50), 'done', 'war'}
+s1.add([10,20,30,50])
+Traceback (most recent call last):
+  File "<pyshell#16>", line 1, in <module>
+    s1.add([10,20,30,50])
+TypeError: unhashable type: 'list'
+s1.add({10,20,30,50})
+Traceback (most recent call last):
+  File "<pyshell#17>", line 1, in <module>
+    s1.add({10,20,30,50})
+TypeError: unhashable type: 'set'
+s1.add(True)
+s1
+{1.223, 'char', 1, 2, 3, 4, 100, 8, 'py', (10, 20, 30, 50), 'done', 'war'}
+
+
+
+#pop
+
+s1={1,2,3,4,"py","char","war",1.223}
+pop()
+Traceback (most recent call last):
+  File "<pyshell#25>", line 1, in <module>
+    pop()
+NameError: name 'pop' is not defined. Did you mean: 'pow'?
+s1.pop()
+1.223
+s1.pop(1)
+Traceback (most recent call last):
+  File "<pyshell#27>", line 1, in <module>
+    s1.pop(1)
+TypeError: set.pop() takes no arguments (1 given)
+s1.pop()
+'char'
+s1.pop()
+1
+s1.pop()
+2
+s1.pop()
+3
+s1.pop()
+4
+s1.pop()
+'py'
+s1.pop()
+'war'
+s1.pop()
+Traceback (most recent call last):
+  File "<pyshell#35>", line 1, in <module>
+    s1.pop()
+KeyError: 'pop from an empty set'
+s1={1,2,3,4,"py","char","war",1.223}
+
+
+#remove
+s1={1,2,3,4,"py","char","war",1.223, 'c', 'java', 'HTML', 99, 'css', (10, 20, 30)}
+s1
+{1.223, 'char', 1, 2, 3, 4, 99, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.remove()
+Traceback (most recent call last):
+  File "<pyshell#42>", line 1, in <module>
+    s1.remove()
+TypeError: set.remove() takes exactly one argument (0 given)
+s1.remove(1)
+s1
+{1.223, 'char', 2, 3, 4, 99, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.remove("char")
+s1
+{1.223, 2, 3, 4, 99, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.remove(99)
+s1
+{1.223, 2, 3, 4, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.remove(2,3)
+Traceback (most recent call last):
+  File "<pyshell#49>", line 1, in <module>
+    s1.remove(2,3)
+TypeError: set.remove() takes exactly one argument (2 given)
+s1={1,2,3,4,"py","char","war",1.223, 'c', 'java', 'HTML', 99, 'css', (10, 20, 30)}
+s1.discard()
+Traceback (most recent call last):
+  File "<pyshell#51>", line 1, in <module>
+    s1.discard()
+TypeError: set.discard() takes exactly one argument (0 given)
+#discardTypeError: set.discard() takes exactly one argument (0 given)
+
+
+#discard
+
+s1={1,2,3,4,"py","char","war",1.223, 'c', 'java', 'HTML', 99, 'css', (10, 20, 30)}s1.discard(1)
+SyntaxError: invalid syntax
+s1={1,2,3,4,"py","char","war",1.223, 'c', 'java', 'HTML', 99, 'css', (10, 20, 30)}
+s1.discard(1)
+s1
+{1.223, 'char', 2, 3, 4, 99, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.discard("char")
+s1
+{1.223, 2, 3, 4, 99, 'css', 'py', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.discard("py")
+s1
+{1.223, 2, 3, 4, 99, 'css', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+s1.discard("char")
+s1
+{1.223, 2, 3, 4, 99, 'css', (10, 20, 30), 'HTML', 'java', 'war', 'c'}
+
+
+#difference
+
+s1={1,2,3,4,"py","char","war",1.223}
+s2={1,2,3,4,"py"}
+s1.difference(s2)
+{1.223, 'char', 'war'}
+s1
+{1.223, 'char', 1, 2, 3, 4, 'py', 'war'}
+s2.difference(s1)
+set()
+s2
+{1, 2, 3, 4, 'py'}
+l1={"C","C++","jvaa","python","HTML"}
+l2={"python","C","css","js","nodejs"}
+p1={"C","C++","jvaa","python","HTML"}
+p2={"python","C","css","js","nodejs"}
+p1.difference(p2)
+{'jvaa', 'C++', 'HTML'}
+p1
+{'python', 'HTML', 'C++', 'jvaa', 'C'}
+p2
+{'python', 'nodejs', 'js', 'C', 'css'}
+p2.difference(p1)
+{'nodejs', 'css', 'js'}
+
+
+
+p3={"C","sql","mysql","python","mangodb"}
+p1.difference(p2)
+{'jvaa', 'C++', 'HTML'}
+
+p1.difference(p2,p3)
+{'jvaa', 'C++', 'HTML'}
+
+
+p1-p2
+{'jvaa', 'C++', 'HTML'}
+
+
+KeyboardInterrupt
+#difference_update()
+
+
+p1={"C","C++","jvaa","python","HTML"}
+p2={"python","C","css","js","nodejs"}
+p1.difference_update(p2)
+p1
+{'HTML', 'C++', 'jvaa'}
+p2.difference_update(p1)
+p2
+{'python', 'nodejs', 'js', 'C', 'css'}
+p3={"C","sql","mysql","python","mangodb"}
+p2.difference_update(p1,p3)
+p2
+{'nodejs', 'js', 'css'}
+
+
+#symmetric_difference()
+
+s1={"C","C++","jvaa","python","HTML"}
+
+s2={"python","C","css","js","nodejs"}
+
+s1.symmetric_difference(s2)
+{'nodejs', 'HTML', 'C++', 'js', 'jvaa', 'css'}
+
+s2.symmetric_difference(s1)
+{'HTML', 'C++', 'nodejs', 'js', 'jvaa', 'css'}
+s1.symmetric_difference(s2)
+{'nodejs', 'HTML', 'C++', 'js', 'jvaa', 'css'}
+s3={"C","sql","mysql","python","mangodb"}
+s1.symmetric_difference(s2,s3)
+Traceback (most recent call last):
+  File "<pyshell#120>", line 1, in <module>
+    s1.symmetric_difference(s2,s3)
+TypeError: set.symmetric_difference() takes exactly one argument (2 given)
+
+
+# symmetric_difference_update()
+
+s1={"c","c++","python","java","react"}
+s2={"nodejs","js","angular","sql","java","c"}
+
+
+s1.symmetric_difference_update(s2)
+
+s1
+{'nodejs', 'js', 'c++', 'python', 'sql', 'angular', 'react'}
+s2.symmetric_difference_update(s1)
+s1
+{'nodejs', 'js', 'c++', 'python', 'sql', 'angular', 'react'}
+s2
+{'c++', 'python', 'java', 'react', 'c'}
+
+
+#isdisjoint()
+
+s1={"c","c++","python","java","react"}
+s2={"nodejs","js","angular","sql","java","c"}
+s1.isdisjoint(s2)
+False
+s2.isdisjoint(s1)
+False
+s1={,"c++","python","mava","react"}
+SyntaxError: invalid syntax
+s1={"c++","python","mava","react"}
+s2={"nodejs","js","angular","sql","java","c"}
+s1.isdisjoint(s2)
+True
+
+
+
+# issubset
+
+s1={"c","c++","python","java","react"}
+s2={"nodejs","js","angular","sql","java","c"}
+s1.issubset(s2)
+False
+s2.issubset(s1)
+False
+s2={"nodejs","js","angular","sql","java","c"}
+s2={"nodejs","js","sql",}
+s2.issubset(s1)
+False
+s1.issubset(s2)
+False
+s2={"nodejs","js","sql"}
+s2.issubset(s1)
+False
+s1.issubset(s2)
+False
+s2={"nodejs","js","angular","sql","java","c"}
+s2={"nodejs","js","sql"}
+s1.issubset(s2)
+False
+s2.issubset(s1)
+False
+s2={"nodejs","js","angular","sql"}
+s1={"nodejs","js","sql"}
+s1.issubset(s2)
+True
+s2.issubset(s1)
+False
+s1={"c","c++","python","java","react"}
+s2={"nodejs","js","angular","sql","java","c"}
+s1.issuperset(s2)
+False
+s2.issuperset(s1)
+False
+s2={"nodejs","js","angular","sql","java","c"}
+s1={"nodejs","js","sql"}
+s2.issuperset(s1)
+True
+
+
+
+# update
+
+s2={"nodejs","js","angular","sql","java","c"}
+s2.update("hi")
+s2
+{'nodejs', 'sql', 'angular', 'h', 'js', 'java', 'i', 'c'}
+s2={"nodejs","js","angular","sql","java","c"}
+s1={"nodejs","js","sql"}
+s2.update(s1)
+s2
+{'nodejs', 'js', 'sql', 'angular', 'java', 'c'}
+>>> s1
+{'nodejs', 'sql', 'js'}
+>>> s1={"c","c++","python","java","react"}
+>>> s2={"nodejs","js","angular","sql","java","c"}
+>>> s2.update(s1)
+>>> s1
+{'python', 'java', 'react', 'c', 'c++'}
+>>> s2
+{'nodejs', 'js', 'c++', 'python', 'sql', 'angular', 'java', 'react', 'c'}
+>>> 
+>>> s2={"nodejs","js","angular","sql","java","c"}
+>>> s2.update("dammmmm")
+>>> 
+>>> s2
+{'nodejs', 'js', 'sql', 'angular', 'a', 'c', 'd', 'm', 'java'}
+>>> 
+>>> 
+>>> #clear()
+>>> s2={"nodejs","js","angular","sql","java","c"}
+>>> s2.clear()
+>>> 
+>>> 
+>>> #unoin
+>>> 
+>>> s2={"nodejs","js","angular","sql","java","c"}
+>>> s1={"c","c++","python","java","react"}
+>>> s3={"C","C++","jvaa","python","HTML"}
+>>> s.union(s2,s3)
+Traceback (most recent call last):
+  File "<pyshell#210>", line 1, in <module>
+    s.union(s2,s3)
+NameError: name 's' is not defined. Did you mean: 's1'?
+>>> s1.union(s2,s3)
+{'nodejs', 'js', 'jvaa', 'C', 'c++', 'python', 'HTML', 'sql', 'angular', 'C++', 'java', 'react', 'c'}
+>>> s1.union(s2)
+{'nodejs', 'js', 'c++', 'python', 'sql', 'angular', 'java', 'react', 'c'}
+>>> s1.union(s3)
+{'jvaa', 'C', 'c++', 'python', 'HTML', 'C++', 'java', 'react', 'c'}
+>>> s2.union(s2)
+{'nodejs', 'sql', 'angular', 'js', 'java', 'c'}
+>>> s2.union(s1)
+{'nodejs', 'js', 'c++', 'python', 'sql', 'angular', 'java', 'react', 'c'}
+>>> 
+>>> s2.union(s1,s3)
+{'nodejs', 'js', 'jvaa', 'C', 'c++', 'python', 'HTML', 'sql', 'angular', 'C++', 'java', 'react', 'c'}
+>>> 
