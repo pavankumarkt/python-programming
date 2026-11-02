@@ -1,0 +1,133 @@
+import pandas
+
+data={
+    "lang":["javascript","ruby","go","rust"],
+    "year":[1995,1995,2009,2010]
+}
+
+x=pandas.DataFrame(data)
+print(x)
+
+
+import pandas as pd
+
+x=[5,15,25,35,45]
+
+y=pd.Series(x,index=[1,2,3,4,5])
+print(y)
+
+
+import pandas as pd
+
+x=["arjun","meera","kiran","diya"]
+
+y=pd.Series(x)
+print(y)
+
+import pandas as pd
+
+x=["arjun","meera","kiran","diya"]
+
+y=pd.Series(x,index=["student1","student2","student3","student4"])
+print(y)
+
+
+
+import pandas as pd
+
+x={"Manager":"arjun","designer":"meera","developer1":"kiran","developer2":"diya"}
+
+y=pd.Series(x)
+print(y)
+
+
+
+import pandas as pd
+
+x={"Manager":"arjun","designer":"meera","developer1":"kiran","developer2":"diya"}
+
+y=pd.Series(x,index=["worker1","worker2"])
+print(y)
+
+
+
+x={"Manager":"arjun","designer":"meera","developer1":"kiran","developer2":"diya"}
+
+y=pd.Series(x,index=["Manager","developer1"])
+print(y)
+
+import pandas as pd
+
+data={"empname":["Asha","Rohan","Nisha","Vikram"],
+"empsal":[42000,68000,51000,79000]}
+
+df=pd.DataFrame(data)
+print(df.loc[[0,2,3]])
+
+
+
+import pandas as pd
+
+data={"empname":["Asha","Rohan","Nisha","Vikram"],
+"empsal":[42000,68000,51000,79000]}
+
+df=pd.DataFrame(data,index=["staff1","staff2","staff3","staff4"])
+print(df.loc["staff1"])
+
+
+import pandas as pd
+
+df=pd.DataFrame({"Names":["Aarav","Maya","Ishan","Tara"],
+                "Status":["Manager","Designer","Intern","Intern"],
+                "birthyear":[1978,1988,2002,2004]})
+
+df["age"]=df["birthyear"].apply(lambda x:2026-x)
+print(df)
+res=tuple(filter(lambda x:x > 40,df['age']))
+print(df)
+print(res)
+
+
+df["double_age"]=df["age"].map(lambda x:x*2)
+                  
+df["gender"]=df["Status"].map(lambda x:"female" if x == "Designer" else "male")
+
+df[["Names","Status","gender"]]=df.apply(lambda x:x[["Names","Status","gender"]].str.upper(),axis=1)
+
+
+print(df)
+print(res)
+
+
+
+import pandas as pd
+
+
+df = pd.read_csv("patient_records.csv")
+
+
+print(df)
+
+
+print("\nAge above 50:")
+print(df[df["Age"] > 45])
+
+
+print("\nMale:")
+print(df[df["Sex"].apply(lambda x: x == "M")])
+
+
+print("\nFemale:")
+print(df[df["Sex"].apply(lambda x: x == "F")])
+
+print("\nHeart disease:")
+print(df[df["Diagnosis"].apply(lambda x: x == "Positive")])
+
+
+df = df.fillna("None")
+print("\nMissing values replaced:")
+print(df)
+
+df["VisitDate"] = pd.to_datetime(df["VisitDate"])
+print("\nDates after January 1, 2026:")
+print(df[df["VisitDate"].apply(lambda x: x > pd.Timestamp("2026-01-01"))])
